@@ -1,5 +1,6 @@
 package com.kalabukhov.app.materiallesson.ui.picture
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -17,6 +18,7 @@ import com.google.android.material.chip.Chip
 import com.kalabukhov.app.materiallesson.R
 import com.kalabukhov.app.materiallesson.ui.MainActivity
 import com.kalabukhov.app.materiallesson.ui.chips.ChipsFragment
+import com.kalabukhov.app.materiallesson.ui.themesForApp
 import kotlinx.android.synthetic.main.bottom_sheet_layout.*
 import kotlinx.android.synthetic.main.main_fragment.*
 

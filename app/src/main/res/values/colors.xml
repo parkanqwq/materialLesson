@@ -12,5 +12,7 @@
     <color name="colorPrimaryDark">#00574B</color>
 
     <color name="colorAccent">#D81B60</color>
-    <color name="color_gray">#66000000</color>
+    <color name="color_gray">#2B2424</color>
+
+    <color name="background">#FAFAFA</color>
 </resources>
