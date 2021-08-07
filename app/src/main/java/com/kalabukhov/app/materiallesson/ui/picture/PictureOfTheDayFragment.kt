@@ -17,6 +17,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.chip.Chip
 import com.kalabukhov.app.materiallesson.R
 import com.kalabukhov.app.materiallesson.ui.MainActivity
+import com.kalabukhov.app.materiallesson.ui.api.ApiActivity
 import com.kalabukhov.app.materiallesson.ui.chips.ChipsFragment
 import com.kalabukhov.app.materiallesson.ui.themesForApp
 import kotlinx.android.synthetic.main.bottom_sheet_layout.*
@@ -108,11 +109,18 @@ class PictureOfTheDayFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.app_bar_fav -> bottomSheetBehavior.state = BottomSheetBehavior.STATE_HALF_EXPANDED
-            R.id.app_bar_settings -> activity?.supportFragmentManager?.beginTransaction()?.add(R.id.container, ChipsFragment())?.addToBackStack(null)?.commit()
+            R.id.app_bar_settings -> activity
+                ?.supportFragmentManager
+                ?.beginTransaction()
+                ?.add(R.id.container, ChipsFragment())
+                ?.addToBackStack(null)?.commit()
             android.R.id.home -> {
                 activity?.let {
                     BottomNavigationDrawerFragment().show(it.supportFragmentManager, "tag")
                 }
+            }
+            R.id.app_bar_lesson3 -> {
+                activity?.let { startActivity(Intent(it, ApiActivity::class.java)) }
             }
         }
         return super.onOptionsItemSelected(item)

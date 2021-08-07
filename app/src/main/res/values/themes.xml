@@ -81,4 +81,8 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="BottomAppBarr" parent="Widget.MaterialComponents.BottomAppBar">
+        <item name="backgroundTint">#00FF00</item>
+    </style>
+
 </resources>
