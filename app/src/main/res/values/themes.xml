@@ -46,17 +46,17 @@
 
     <style name="blackTheme" parent="Theme.MaterialLesson">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#FFEB3B</item>
+        <item name="colorPrimary">#DCE775</item>
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
 
-        <item name="colorSurface">#2C302F</item>
-        <item name="android:colorBackground">@color/white</item>
-        <item name="colorOnBackground">#212121</item>
+        <item name="colorSurface">#151514</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorOnBackground">#FFFFFF</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#000000</item>
+        <item name="colorSecondary">#DCE775</item>
         <item name="colorSecondaryVariant">@color/colorPrimaryDark</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/background</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

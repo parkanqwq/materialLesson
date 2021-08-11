@@ -18,6 +18,7 @@ import com.google.android.material.chip.Chip
 import com.kalabukhov.app.materiallesson.R
 import com.kalabukhov.app.materiallesson.ui.MainActivity
 import com.kalabukhov.app.materiallesson.ui.api.ApiActivity
+import com.kalabukhov.app.materiallesson.ui.api.collapsing_bar.CollapsingToolbarLayout
 import com.kalabukhov.app.materiallesson.ui.chips.ChipsFragment
 import com.kalabukhov.app.materiallesson.ui.themesForApp
 import kotlinx.android.synthetic.main.bottom_sheet_layout.*
@@ -47,11 +48,6 @@ class PictureOfTheDayFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setBottomSheetBehavior(view.findViewById(R.id.bottom_sheet_container))
-        toDayChips.setOnClickListener {
-            choiceDate = 0
-            viewModel.getData()
-                .observe(this@PictureOfTheDayFragment, { renderData(it) })
-        }
 //        bottomSheetBehavior.addBottomSheetCallback(object :
 //            BottomSheetBehavior.BottomSheetCallback() {
 //            override fun onStateChanged(bottomSheet: View, newState: Int) {
@@ -84,6 +80,11 @@ class PictureOfTheDayFragment : Fragment() {
     }
 
     private fun changeDays(day: String) {
+        if (day == "toDay") {
+            choiceDate = 0
+            viewModel.getData()
+                .observe(this@PictureOfTheDayFragment, { renderData(it) })
+        }
         if (day == "1 last day") {
             choiceDate = 1
             viewModel.getData()
@@ -121,6 +122,9 @@ class PictureOfTheDayFragment : Fragment() {
             }
             R.id.app_bar_lesson3 -> {
                 activity?.let { startActivity(Intent(it, ApiActivity::class.java)) }
+            }
+            R.id.app_bar_lesson4 -> {
+                activity?.let { startActivity(Intent(it, CollapsingToolbarLayout::class.java)) }
             }
         }
         return super.onOptionsItemSelected(item)

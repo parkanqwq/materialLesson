@@ -7,4 +7,10 @@
         android:icon="@drawable/ic_search"
         android:title="@string/search"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/app_bar_lesson4"
+        android:icon="@drawable/ic_send"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
 </menu>
