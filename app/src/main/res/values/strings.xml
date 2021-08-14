@@ -10,4 +10,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="atac_galactik">Захватить галактику</string>
+    <string name="not_war">Выбрать мирную планету</string>
+    <string name="like_word">Мир во всем мире</string>
 </resources>
