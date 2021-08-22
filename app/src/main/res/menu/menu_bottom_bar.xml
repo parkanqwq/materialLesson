@@ -13,4 +13,16 @@
         android:icon="@drawable/ic_settings_menu"
         android:title="@string/settings"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/aladin"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="шрифт aladin" />
+    <item
+        android:id="@+id/autour_one"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="шрифт autour_one" />
+    <item
+        android:id="@+id/Xenosphere"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="шрифт Xenosphere-RM66" />
 </menu>

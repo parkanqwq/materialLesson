@@ -2,8 +2,13 @@ package com.kalabukhov.app.materiallesson.ui.picture
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.*
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -130,6 +135,22 @@ class PictureOfTheDayFragment : Fragment() {
             R.id.app_bar_lesson6 -> {
                 activity?.let { startActivity(Intent(it, NoteMyClass::class.java)) }
             }
+            R.id.aladin -> {
+                activity?.let {
+                    bottom_sheet_description.typeface = Typeface.createFromAsset(it.assets, "fonts/aladin.ttf")
+                }
+            }
+            R.id.autour_one -> {
+                activity?.let {
+                    bottom_sheet_description.typeface = Typeface.createFromAsset(it.assets, "fonts/autour_one.ttf")
+                }
+            }
+            R.id.Xenosphere -> {
+                activity?.let {
+                    bottom_sheet_description.typeface = Typeface.createFromAsset(it.assets, "Xenosphere-RM66.ttf")
+                }
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }
@@ -146,13 +167,20 @@ class PictureOfTheDayFragment : Fragment() {
                     toast("Link is empty")
                 } else {
                     //showSuccess()
-                    bottom_sheet_description_header.text = tittle
+                   // bottom_sheet_description_header.text = tittle
                     bottom_sheet_description.text = textAll
                     image_view.load(url) {
                         lifecycle(this@PictureOfTheDayFragment)
                         error(R.drawable.ic_load_error_vector)
                         placeholder(R.drawable.ic_no_photo_vector)
                     }
+
+                    val spannable = SpannableString(tittle)
+                    spannable.setSpan(
+                        ForegroundColorSpan(Color.RED),
+                        0, firstWordsRed(tittle),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                    bottom_sheet_description_header.text = spannable
                 }
             }
             is PictureOfTheDayData.Loading -> {
@@ -163,6 +191,19 @@ class PictureOfTheDayFragment : Fragment() {
                 toast(data.error.message)
             }
         }
+    }
+
+    private fun firstWordsRed(string: String?): Int {
+        if (string != null) {
+            for (i in 0..string.length-1){
+                var character = string[i]
+                val ch = ' '
+                if (character == ch){
+                   return i
+                }
+            }
+        }
+        return 0
     }
 
     private fun setBottomAppBar(view: View) {
