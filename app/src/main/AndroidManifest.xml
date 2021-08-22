@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.api.ApiActivity" />
+        <activity android:name=".ui.recycler.RecyclerActivity"/>
+        <activity android:name=".ui.lesson6.NoteMyClass"/>
     </application>
 
 </manifest>

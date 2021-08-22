@@ -20,6 +20,7 @@ import com.kalabukhov.app.materiallesson.ui.MainActivity
 import com.kalabukhov.app.materiallesson.ui.api.ApiActivity
 import com.kalabukhov.app.materiallesson.ui.api.collapsing_bar.CollapsingToolbarLayout
 import com.kalabukhov.app.materiallesson.ui.chips.ChipsFragment
+import com.kalabukhov.app.materiallesson.ui.lesson6.NoteMyClass
 import com.kalabukhov.app.materiallesson.ui.themesForApp
 import kotlinx.android.synthetic.main.bottom_sheet_layout.*
 import kotlinx.android.synthetic.main.main_fragment.*
@@ -125,6 +126,9 @@ class PictureOfTheDayFragment : Fragment() {
             }
             R.id.app_bar_lesson4 -> {
                 activity?.let { startActivity(Intent(it, CollapsingToolbarLayout::class.java)) }
+            }
+            R.id.app_bar_lesson6 -> {
+                activity?.let { startActivity(Intent(it, NoteMyClass::class.java)) }
             }
         }
         return super.onOptionsItemSelected(item)

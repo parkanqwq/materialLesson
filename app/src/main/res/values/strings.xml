@@ -13,4 +13,6 @@
     <string name="atac_galactik">Захватить галактику</string>
     <string name="not_war">Выбрать мирную планету</string>
     <string name="like_word">Мир во всем мире</string>
+    <string name="note">Заметки</string>
+    <string name="note_is_empty">Note isEmpty</string>
 </resources>
