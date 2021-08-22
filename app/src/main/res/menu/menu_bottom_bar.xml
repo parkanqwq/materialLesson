@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/app_bar_fav"
+        android:icon="@drawable/ic_favourite_menu"
+        android:title="@string/favourite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/app_bar_settings"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/aladin"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="шрифт aladin" />
+    <item
+        android:id="@+id/autour_one"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="шрифт autour_one" />
+    <item
+        android:id="@+id/Xenosphere"
+        android:icon="@drawable/ic_settings_menu"
+        android:title="шрифт Xenosphere-RM66" />
+</menu>
