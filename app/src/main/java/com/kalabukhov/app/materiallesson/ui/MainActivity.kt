@@ -15,6 +15,7 @@ var themesForApp: String = ""
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.blueTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         lookingThemes()
